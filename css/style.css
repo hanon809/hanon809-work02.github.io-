@@ -1,0 +1,539 @@
+@charset "utf-8";
+
+/* Google Fontから引用 */
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Zen+Maru+Gothic&display=swap');
+
+/* 基本要素の設定 */
+* {
+    margin: 0;
+    padding: 0;
+    /* Google Fontから引用 */
+    font-family: "Kiwi Maru", serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* 共通のスタイリング */
+body {
+    position: relative;
+    background-image: url(../images/background-anime-pc.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* フェードイン */
+.fadein {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* h2 */
+h2 {
+    width: fit-content;
+    margin: 150px auto 100px auto;
+    padding: 20px 50px;
+    border: 1px solid black;
+    border-radius: 80px;
+    font-size: 35px;
+    font-weight: normal;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* セクションごとの間隔 */
+section {
+    margin-bottom: 250px;
+}
+
+/* ヘッダー */
+#header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: auto; */
+    height: 80px;
+    margin: 10px 0;
+}
+
+.logo {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border: 1px solid #000;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* リセット */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* ナビゲーションのスタイル */
+nav {
+    margin: 0 2rem 0 0;
+}
+
+.header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid#000;
+}
+
+/* メインエリア */
+.main-container {
+    width: 100%;
+}
+
+#main1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#main2 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#main3 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#main4 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#main5 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#main6 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Instagram */
+.instagram {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5%;
+    height: 640px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.instagram-media {
+    width: 100%;
+    max-width: 100% !important;
+    min-width: auto !important;
+    height: 100%;
+    margin: 0 -1px !important;
+    margin-inline: auto !important;
+}
+
+/* フッターエリア */
+#footer {
+    width: 100%;
+    height: 220px;
+    padding: 2rem;
+    background-color: #FFEA69;
+    font-size: 17px;
+    border: 1px solid black;
+}
+
+.fotter-navi a {
+    color: black;
+}
+
+.fotter-navi {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+}
+
+.footer-logo img{
+    width: fit-content;
+    height: 130px;
+}
+
+.small{
+    display: flex;
+    justify-content: center;
+    color: #616161;
+    font-size: 15px;
+}
+
+/*グローバルナビゲーションの設定---------------------------------------------------*/
+
+/*グローバルナビゲーション用のリスト.menu-listの通常時のスタイル*/
+.menu-list {
+    position: fixed;
+    top: 5vh;
+    right: -100%;
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    /* メニューを縦並びにする */
+    transition: 0.3s;
+}
+
+/*グローバルナビゲーション用のリストの項目.menu-itemのスタイル*/
+.menu-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* メニューテキスト位置をリスト内の上下左右中央に配置 */
+    justify-content: center;
+    align-items: center;
+}
+
+/*グローバルナビゲーション用のリストの項目.menu-itemのリンク要素のスタイル*/
+.menu-item a {
+    display: block;
+    width: auto;
+    padding: 18px;
+    color: #000;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: .5s;
+}
+
+/*グローバルナビゲーション用のリストの項目.menu-itemのリンク要素のホバーのスタイル*/
+.menu-item a:hover {
+    color: #e6155a;
+}
+
+/*ハンバーガーボタンのスタイル ここから---------------------------------------------------*/
+
+/*ハンバーガーボタンのアイコン用button要素*/
+.hamburger-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: #fff;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で中央の線*/
+.hamburger-btn-line {
+    display: block;
+    position: relative;
+    left: 15%;
+    width: 70%;
+    height: 5px;
+    background-color: #9BE6F8;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で上と下の線 擬似要素の::beforeと::afterでHTML的に存在していない要素を.hamburger-btn-lineの前と後に作成して使用*/
+.hamburger-btn-line::before,
+.hamburger-btn-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で上の線 ::beforeでCSSで作成*/
+.hamburger-btn-line::before {
+    transform: translateY(-12px);
+    background-color: #FFB6CD;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で上の線 ::afterでCSSで作成*/
+.hamburger-btn-line::after {
+    transform: translateY(12px);
+    background-color: #EFC0FF;
+}
+
+/*ハンバーガーボタンのアイコンが押された状態のスタイル ここから---------------------------------------------------*/
+
+/*グローバルナビゲーション用のリスト.menu-listのオープン時のスタイル*/
+.menu-list.open {
+    right: 5%;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で中央の線 オープン時*/
+.hamburger-btn-line.open {
+    background-color: transparent;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で上と下の線*/
+.hamburger-btn-line.open::before,
+.hamburger-btn-line.open::after {
+    content: "";
+    transition: 0.2s;
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で上の線*/
+.hamburger-btn-line.open::before {
+    transform: rotate(45deg);
+}
+
+/*ハンバーガーボタンのアイコン用button要素内 ３本の中で下の線*/
+.hamburger-btn-line.open::after {
+    transform: rotate(-45deg);
+}
+
+/* デスクトップ版------------------------------- */
+@media (min-width: 1024px) {
+    .hamburger-btn {
+        display: none;
+    }
+
+    .logo {
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        border: 1px solid #000;
+    }
+
+    .menu-list {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-item {
+        width: auto;
+        margin: 0 1rem;
+    }
+}
+
+/* スマホ対応　 ------------------------------------------------------- */
+@media (max-width: 440px) {
+    body {
+        position: relative;
+        background-image: url(../images/background-anime-sp.png);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    /* フェードイン */
+    .fadein {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    /* h2 */
+    h2 {
+        width: fit-content;
+        margin: 50px auto 50px auto;
+        padding: 10px 20px;
+        font-size: 25px;
+        font-weight: normal;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 50px;
+        border: 1px solid black;
+    }
+
+    /* セクションごとの間隔 */
+    section {
+        margin-bottom: 150px;
+    }
+
+    /* ヘッダー */
+    #header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        width: 170px;
+        padding: 0;
+        text-align: center;
+        background-color: unset;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 0;
+    }
+    
+    .logo img {
+        width: 100%;
+    }
+    
+    /* リセット */
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* ナビゲーションのスタイル */
+    nav {
+        margin: 0 2rem 0 0;
+    }
+
+    .header-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50px;
+        border: 1px solid#000;
+    }
+
+    .menu-item a {
+        display: block;
+        width: auto;
+        color: #000;
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    /* メインエリア */
+    .main-container {
+        width: 100%;
+    }
+
+    #main1 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main3 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main4 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main5 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main6 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Instagram */
+    .instagram {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 5%;
+        height: 1550px;
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 30px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .instagram-media {
+        width: 100%;
+        max-width: 100% !important;
+        min-width: auto !important;
+        height: 100%;
+        margin: 0 -1px !important;
+        margin-inline: auto !important;
+    }
+
+    /* フッターエリア */
+    #footer {
+        width: 100%;
+        height: 180px;
+        padding: 2rem;
+        background-color: #FFEA69;
+        font-size: 17px;
+        border: 1px solid black;
+    }
+
+    .fotter-navi a {
+        color: black;
+    }
+
+    .fotter-navi {
+        text-align: center;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .footer-logo img{
+        width: fit-content;
+        height: 90px;
+    }
+}

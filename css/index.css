@@ -1,0 +1,610 @@
+@charset "utf-8";
+
+/* 背景　流体 */
+.background-svg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.background-svg svg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+}
+
+/* ヒーローエリア */
+#hero-area {
+    width: 100%;
+    height: 100vh;
+}
+
+/* スライドショー */
+.hero-area-slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.hero-area-slide .hero-area-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    animation: slideshow 12s linear infinite;
+    background-size: cover;
+}
+
+.hero-area-slide img:nth-of-type(1) {
+    background-image: url(../images/hero-area-logo.png);
+    animation-delay: 0s;
+}
+
+.hero-area-slide img:nth-of-type(2) {
+    background-image: url(../images/photo24.jpg);
+    animation-delay: 4s;
+}
+
+.hero-area-slide img:nth-of-type(3) {
+    background-image: url(../images/photo20.jpg);
+    animation-delay: 8s;
+}
+
+/* 詳細ボタン */
+.more {
+    width: 170px;
+    margin-top: 30px;
+    margin-left: auto;
+    padding: 5px 0;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: #ffeb69;
+    transition: .5s;
+}
+
+.more:hover {
+    background-color: #fff;
+}
+
+/* title名 */
+/* member accsess */
+.title {
+    margin: 0 auto;
+    text-align: left;
+    font-size: 30px;
+}
+
+/* event */
+.event-title {
+    text-align: left;
+    font-size: 30px;
+}
+
+/* contest */
+.contest-title {
+    margin: 0 auto;
+    padding: 0 0 15px 0;
+    text-align: center;
+    font-size: 35px;
+
+}
+
+/* display */
+.display {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* メンバー募集 */
+.member {
+    width: auto;
+    padding: 40px;
+    background-color: #9BE6F8;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+}
+
+/* 挿入写真 */
+.member-img {
+    width: 500px;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* displayで横並び */
+.member-display {
+    display: flex;
+    justify-content: left;
+    width: 500px;
+}
+
+/* 学年(年齢) */
+/* 長久手 */
+.grade {
+    font-size: 25px;
+    text-align: right;
+    line-height: 2;
+}
+
+/* 豊川 */
+.grade2 {
+    font-size: 25px;
+    text-align: left;
+    line-height: 2;
+}
+
+/* 日時 */
+.member-date {
+    font-size: 25px;
+    line-height: 2;
+}
+
+
+/* イベント */
+/* displayで横並び */
+.event-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 内容 */
+.event {
+    width: 100%;
+    padding: 40px;
+    background-color: #FFB6CD;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    width: 100%;
+    margin: 30px auto;
+    border: none;
+    border-top: 1px solid #000000;
+}
+
+.event a {
+    transition: .5s;
+}
+
+.event a:hover {
+    color: #fff;
+}
+
+/* アクセス */
+.access {
+    background-color: #E2FC95;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* displayで横並び */
+.access-display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+}
+
+/* 長久手レッスン場所 */
+.access-nagakute {
+    width: 500px;
+}
+
+/* 豊川レッスン場所 */
+.access-toyokawa {
+    width: 500px;
+}
+
+/* 建物名 */
+.access-name {
+    font-size: 25px;
+    padding: 0 0 0 25px;
+}
+
+/* Google Map 埋め込み */
+.access-nagakute .map {
+    text-align: center;
+    margin: 30px 0px 0 0px;
+}
+
+.access-toyokawa .map {
+    text-align: center;
+    margin: 30px 20px 0 20px;
+}
+
+/* 住所 */
+.address {
+    font-size: 20px;
+    padding: 0 0 0 25px;
+}
+
+/* 発表会 */
+.contest {
+    width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #FFC89A;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contest-p {
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* スライドショー */
+.slide {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 8/4;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slide .contest-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    aspect-ratio: 6/4;
+    opacity: 0;
+    animation: slideshow 12s linear infinite;
+    border-radius: 40px;
+    border: 1px solid black;
+}
+
+.slide img:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.slide img:nth-of-type(2) {
+    animation-delay: 4s;
+}
+
+.slide img:nth-of-type(3) {
+    animation-delay: 8s;
+}
+
+/*slideshowという名前のアニメーションの変化内容 12秒中0%の時に透明 17~33%で不透明 33~50%で透明　50〜100％は透明のまま、という変化をする*/
+@keyframes slideshow {
+    0% {
+        opacity: 0
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    33% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+/* スマホ対応　 ------------------------------------------------------- */
+@media (max-width: 440px) {
+
+    /* 背景　流体 */
+    .background-svg {
+        display: none;
+    }
+
+    /* ヒーローエリア */
+    #hero-area {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .kasaneru svg,
+    .kasaneru p {
+        display: none;
+    }
+
+    /* スライドショー */
+    .hero-area-slide {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    .hero-area-slide .hero-area-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        animation: slideshow 12s linear infinite;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-area-slide img:nth-of-type(1) {
+        background-image: url(../images/hero.JPG);
+        animation-delay: 0s;
+    }
+
+    .hero-area-slide img:nth-of-type(2) {
+        background-image: url(../images/photo06.jpg);
+        animation-delay: 4s;
+    }
+
+    .hero-area-slide img:nth-of-type(3) {
+        background-image: url(../images/photo09.jpg);
+        animation-delay: 8s;
+    }
+
+    /* 詳細ボタン */
+    .more {
+        width: 100px;
+        margin-top: 10px;
+        margin-left: auto;
+        padding: 3px 0;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 50px;
+        border: 1px solid black;
+        background-color: #ffeb69;
+        transition: .5s;
+    }
+
+    .more:hover {
+        background-color: #fff;
+    }
+
+    /* title名 */
+    /* member accsess */
+    .title {
+        margin: 0 auto;
+        font-size: 18px;
+    }
+
+    /* event */
+    .event-title {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+
+    /* display */
+    .display {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* メンバー募集 */
+    .member {
+        width: 100%;
+        padding: 20px 25px;
+        background-color: #9BE6F8;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border: 1px solid black;
+    }
+
+    /* 挿入写真 */
+    .member-img {
+        display: none;
+    }
+
+    /* displayで横並び */
+    .member-display {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+    /* 学年(年齢) */
+    /* 長久手 */
+    .grade {
+        width: 140px;
+        margin-left: 20px;
+        font-size: 13px;
+        text-align: right;
+        line-height: 2;
+    }
+
+    /* 豊川 */
+    .grade2 {
+        width: 100%;
+        margin-left: 20px;
+        font-size: 13px;
+        text-align: left;
+        line-height: 2;
+    }
+
+    /* 日時 */
+    .member-date {
+        width: 120px;
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .toyokawa {
+        margin-top: 20px;
+    }
+
+    /* イベント */
+    /* displayで横並び */
+    .event-display {
+        display: flex;
+        justify-content: space-between;
+        /* margin: 0 20px; */
+    }
+
+    /* 内容 */
+    .event {
+        width: 100%;
+        padding: 20px 25px;
+        background-color: #FFB6CD;
+        border-radius: 30px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .event-title span {
+        display: none;
+    }
+
+    hr {
+        width: 100%;
+        margin: 15px auto;
+        border: none;
+        border-top: 1px solid #000000;
+    }
+
+    /* アクセス */
+    .access {
+        background-color: #E2FC95;
+        border-radius: 30px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* displayで縦並び */
+    .access-display {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 25px;
+    }
+
+    /* 長久手レッスン場所 */
+    .access-nagakute {
+        width: 100%;
+    }
+
+    /* 豊川レッスン場所 */
+    .access-toyokawa {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* 建物名 */
+    .access-name {
+        font-size: 15px;
+        padding: 0 0 0 20px;
+    }
+
+    /* 住所 */
+    .address {
+        font-size: 15px;
+        padding: 0 0 0 20px;
+    }
+
+    /* Google Map 埋め込み */
+    .access .map {
+        position: relative;
+        width: 100%;
+        height: 0;
+        margin: 30px 0 0 0;
+        padding: 150px 0;
+        text-align: center;
+    }
+
+    .access .map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 発表会 */
+    .contest {
+        width: 700px;
+        margin: 0 auto;
+        padding: 40px 35px 0px 35px;
+        background-color: #FFC89A;
+        border-radius: 60px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .contest-p {
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* スライドショー */
+    .slide {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide .contest-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        aspect-ratio: 4/3;
+        opacity: 0;
+        animation: slideshow 12s linear infinite;
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+
+    .slide img:nth-of-type(1) {
+        animation-delay: 0s;
+    }
+
+    .slide img:nth-of-type(2) {
+        animation-delay: 4s;
+    }
+
+    .slide img:nth-of-type(3) {
+        animation-delay: 8s;
+    }
+
+    @keyframes slideshow {
+        0% {
+            opacity: 0
+        }
+
+        17% {
+            opacity: 1
+        }
+
+        33% {
+            opacity: 1
+        }
+
+        50% {
+            opacity: 0
+        }
+    }
+}

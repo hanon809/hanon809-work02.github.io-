@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+/* 背景　流体 */
+.background-svg {
+    margin-top: -200px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.background-svg svg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 見出しの装飾 */
+.midashi {
+    width: 500px;
+    text-align: center;
+    position: relative;
+    border-radius: 50px;
+    margin: 200px auto;
+    padding: 1rem 2rem calc(1rem + 10px);
+    background: #E2FC95;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.midashi:before {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border: 2px solid #000;
+    border-radius: 50px;
+}
+
+/* メンバー募集 */
+.member {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+}
+
+.member01{
+    background-color: #effdc4;
+}
+
+.member02{
+    background-color: #E2FC95;
+}
+
+/* display */
+.display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.member-display {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.sp-display {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 18px;
+}
+
+#nagakute {
+    margin-bottom: 300px;
+}
+
+/* タイトル */
+.member-title {
+    padding: 10px 10px 0 0;
+    font-size: 35px;
+}
+
+/* レッス費関連 */
+.member-name {
+    font-size: 30px;
+}
+
+/* レッスンの場所 */
+.member-address {
+    font-size: 30px;
+}
+
+.member-money{
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.member .team {
+    font-size: 25px;
+}
+
+.member .time {
+    width: fit-content;
+    font-size: 27px;
+}
+
+span {
+    font-size: 18px;
+}
+
+.span {
+    margin: 5px 0 10px 0;
+    font-size: 18px;
+}
+
+/* 挿入写真 */
+.member-img {
+    width: 500px;
+    border-radius: 40px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* スマホ対応　 ------------------------------------------------------- */
+@media (max-width: 440px) {
+
+    /* 背景　流体 */
+    .background-svg {
+        display: none;
+    }
+
+    /* 見出しの装飾 */
+    .midashi {
+        width: 300px;
+        text-align: center;
+        position: relative;
+        border-radius: 50px;
+        margin: 100px auto;
+        padding: 1rem .5rem calc(1rem + 10px);
+        background: #E2FC95;
+        font-size: 25px;
+        font-weight: normal;
+    }
+
+    .midashi:before {
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border: 2px solid #000;
+        border-radius: 50px;
+    }
+
+    /* メンバー募集 */
+    .member {
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border: 1px solid black;
+    }
+
+    #nagakute {
+        margin-bottom: 100px;
+    }
+
+    /* displayで縦並び */
+    .display {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .member-display {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    /* displayで横並び */
+    .sp-display {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 18px;
+    }
+
+    /* タイトル */
+    .member-title {
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .member-money{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .member-name {
+        font-size: 15px;
+    }
+
+    .member-address {
+        margin-left: 15px;
+        font-size: 15px;
+    }
+
+    span {
+        font-size: 10px;
+    }
+
+    .span {
+        margin-top: 2px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .member .team {
+        font-size: 13px;
+    }
+
+    .member .time {
+        width: 70%;
+        margin: 0;
+        font-size: 13px;
+    }
+}
